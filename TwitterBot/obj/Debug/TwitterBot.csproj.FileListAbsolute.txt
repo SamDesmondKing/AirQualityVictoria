@@ -1,0 +1,13 @@
+E:\5.Programming\IDE-Workspaces\VisualStudio\TwitterBot\TwitterBot\bin\Debug\TwitterBot.exe.config
+E:\5.Programming\IDE-Workspaces\VisualStudio\TwitterBot\TwitterBot\bin\Debug\TwitterBot.exe
+E:\5.Programming\IDE-Workspaces\VisualStudio\TwitterBot\TwitterBot\bin\Debug\TwitterBot.pdb
+E:\5.Programming\IDE-Workspaces\VisualStudio\TwitterBot\TwitterBot\bin\Debug\Hammock.ClientProfile.dll
+E:\5.Programming\IDE-Workspaces\VisualStudio\TwitterBot\TwitterBot\bin\Debug\Newtonsoft.Json.dll
+E:\5.Programming\IDE-Workspaces\VisualStudio\TwitterBot\TwitterBot\bin\Debug\TweetSharp.dll
+E:\5.Programming\IDE-Workspaces\VisualStudio\TwitterBot\TwitterBot\bin\Debug\Hammock.ClientProfile.pdb
+E:\5.Programming\IDE-Workspaces\VisualStudio\TwitterBot\TwitterBot\bin\Debug\Newtonsoft.Json.xml
+E:\5.Programming\IDE-Workspaces\VisualStudio\TwitterBot\TwitterBot\bin\Debug\TweetSharp.pdb
+E:\5.Programming\IDE-Workspaces\VisualStudio\TwitterBot\TwitterBot\obj\Debug\TwitterBot.csprojAssemblyReference.cache
+E:\5.Programming\IDE-Workspaces\VisualStudio\TwitterBot\TwitterBot\obj\Debug\TwitterBot.csproj.CopyComplete
+E:\5.Programming\IDE-Workspaces\VisualStudio\TwitterBot\TwitterBot\obj\Debug\TwitterBot.exe
+E:\5.Programming\IDE-Workspaces\VisualStudio\TwitterBot\TwitterBot\obj\Debug\TwitterBot.pdb
