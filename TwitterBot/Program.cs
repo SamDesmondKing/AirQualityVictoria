@@ -22,9 +22,16 @@ namespace TwitterBot
         static void Main(string[] args)
         {
 
-            Console.WriteLine($"<{DateTime.Now}> - Bot Started");
-            SendTweet("HelloWorld!");
-            Console.Read();
+            //For Retweeting from EPV_Victoria
+
+
+
+
+
+            //For sending a hard-coded tweet
+            //Console.WriteLine($"<{DateTime.Now}> - Bot Started");
+            //SendTweet("HelloWorld!");
+            // Console.Read();
 
         }
 
@@ -46,6 +53,14 @@ namespace TwitterBot
                     Console.ResetColor();
                 }
             });
+
+        }
+
+        private static void retweet(string status)
+        {
+
+
+
 
         }
     }
