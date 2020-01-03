@@ -12,10 +12,10 @@ namespace TwitterBot
     class Program
     {
 
-        private static string customerKey = "exaO4equ7vze7WfpoeuiPqdBs";
-        private static string customerKeySecret = "iUKTHsK4oycV2vFgXoNO8qIU75ugBRWzUkEUW2zpeYnfgCz9xb";
-        private static string accessToken = "1577588460-jv5Q9byGgpVKsNclKLqTA7BQzSEyTLrsnuWofIM";
-        private static string accessTokenSecret = "5GshyiBeOrMXJvZXSaULeh6vESQzQzgGHnZiXJfDWobXd";
+        private static string customerKey = "gQFaDYO5a59nf3AGWo6ZCCIaJ";
+        private static string customerKeySecret = "bbmjE1aU1fQeyvNUR1MpghhyqaUwzWiNlNG4u6HIAcCdD3pJRY";
+        private static string accessToken = "1212970147939381250-7aj2fMVVd5yq5HElbElncVOVJkUVJp";
+        private static string accessTokenSecret = "joz6Ruap7aV2URSSp7CvGiD6wCs1aZeiCj1iDr5PHcDrr";
 
         private static TwitterService service = new TwitterService(customerKey, customerKeySecret, accessToken, accessTokenSecret);
 
