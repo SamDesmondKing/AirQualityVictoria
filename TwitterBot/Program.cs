@@ -11,6 +11,8 @@ namespace TwitterBot
 {
     class Program
     {
+        //TODO 
+        // - Search only EPA_Victoria rather than the whole hashtag
 
         private static string customerKey = "gQFaDYO5a59nf3AGWo6ZCCIaJ";
         private static string customerKeySecret = "bbmjE1aU1fQeyvNUR1MpghhyqaUwzWiNlNG4u6HIAcCdD3pJRY";
@@ -22,22 +24,14 @@ namespace TwitterBot
         static void Main(string[] args)
         {
 
-            //For Retweeting from EPV_Victoria
-
-
-
-
-
-            //For sending a hard-coded tweet
-            //Console.WriteLine($"<{DateTime.Now}> - Bot Started");
-            //SendTweet("HelloWorld!");
-            // Console.Read();
-
+            Console.WriteLine($"<{DateTime.Now}> - Bot Started");
+            var tweet = "RT @EPA_Victoria:" + Program.GetTweet("#AirQuality");
+            SendTweet(tweet);
+            Console.Read();
         }
 
         private static void SendTweet(string _status)
         {
-
             service.SendTweet(new SendTweetOptions { Status = _status }, (tweet, response) =>
             {
                 if (response.StatusCode == HttpStatusCode.OK)
@@ -53,15 +47,14 @@ namespace TwitterBot
                     Console.ResetColor();
                 }
             });
-
         }
 
-        private static void retweet(string status)
+
+        private static String GetTweet(string hashtagTarget)
         {
-
-
-
-
+            var tweets_search = service.Search(new SearchOptions { Q = hashtagTarget, Resulttype = TwitterSearchResultType.Recent });
+            
+            return tweets_search.Statuses.First().Text;
         }
     }
 }
