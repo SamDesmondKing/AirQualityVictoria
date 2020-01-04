@@ -25,8 +25,9 @@ namespace TwitterBot
         {
 
             Console.WriteLine($"<{DateTime.Now}> - Bot Started");
-            var tweet = "RT @EPA_Victoria:" + Program.GetTweet("#AirQuality");
-            SendTweet(tweet);
+            var tweet = "RT @EPA_Victoria: " + Program.GetTweet("@EPA_Victoria #AirQuality forecast for today:");
+            //SendTweet(tweet);
+            Console.WriteLine(tweet);
             Console.Read();
         }
 
@@ -50,10 +51,10 @@ namespace TwitterBot
         }
 
 
-        private static String GetTweet(string hashtagTarget)
+        private static String GetTweet(string target)
         {
-            var tweets_search = service.Search(new SearchOptions { Q = hashtagTarget, Resulttype = TwitterSearchResultType.Recent });
-            
+            var tweets_search = service.Search(new SearchOptions { Q = target, Resulttype = TwitterSearchResultType.Recent });
+
             return tweets_search.Statuses.First().Text;
         }
     }
