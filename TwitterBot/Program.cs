@@ -1,6 +1,7 @@
 ﻿using System;
 using System.Linq;
 using System.Net;
+using System.Threading;
 using TweetSharp;
 
 namespace TwitterBot
@@ -8,7 +9,7 @@ namespace TwitterBot
     class Program
     {
         //TODO 
-        // - Automate to update every hour while running on raspi. 
+        // - transfer to raspi. 
 
         private static string lastTweet = "";
         private static string customerKey = "gQFaDYO5a59nf3AGWo6ZCCIaJ";
@@ -20,24 +21,29 @@ namespace TwitterBot
         static void Main(string[] args)
         {
 
-            Console.WriteLine($"<{DateTime.Now}> - Bot Started");
-            
-            //Get tweet to send as string 
-            var tweet = "RT @EPA_Victoria: " + Program.GetTweet("@EPA_Victoria #AirQuality forecast for today:");
+            while (true)
+            {
+                Console.WriteLine($"<{DateTime.Now}> - Bot Cycling");
 
-            //Check to make sure we're not sending a duplicate tweet
-            if (tweet != lastTweet)
-            {
-                //Send it
-                //SendTweet(tweet);
-                //Program.lastTweet = tweet;
-                Console.WriteLine(tweet);
-                Console.Read();
-            }
-            else
-            {
-                Console.WriteLine("Error: duplicate tweet");
-                Console.Read();
+                //Get tweet to send as string 
+                var tweet = Program.GetTweet("@EPA_Victoria #AirQuality forecast for today:");
+
+                Console.WriteLine("Tweet loaded before duplicate check: " + tweet);
+
+                //Check to make sure we're not sending a duplicate tweet
+                if (tweet != lastTweet && tweet[0] != 'R')
+                {
+                    //Send it
+                    SendTweet("RT @EPA_Victoria: " + tweet);
+                    Program.lastTweet = tweet;
+                }
+                else
+                {
+                    Console.WriteLine("Not Sent: duplicate tweet");
+                }
+
+                //Cycle every thirty minutes
+                Thread.Sleep(1800000);
             }
         }
 
